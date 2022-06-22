@@ -2,11 +2,6 @@ from flask import Flask
 from flask_admin import Admin
 from flask import abort, render_template
 
-#Tutorial base
-#https://stackoverflow.com/questions/53566832/access-app-decorator-in-flask-using-factory-pattern
-#https://flask.palletsprojects.com/en/2.1.x/api/#flask.Flask.errorhandler
-#https://www.askpython.com/python-modules/flask/flask-error-handling
-
 def register_handlers(app):
     if app.config.get('DEBUG') is True:
         app.logger.debug('Skipping error handlers in Debug mode')
